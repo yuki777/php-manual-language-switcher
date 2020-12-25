@@ -1,10 +1,10 @@
 chrome.webRequest.onBeforeRequest.addListener(function(details) {
   let language = localStorage.getItem('language');
-  let regex = new RegExp('https:\/\/www\.php\.net\/manual\/.+[^' + language + ']\/function\.(.+)\.php$');
+  let regex = new RegExp('https:\/\/www\.php\.net\/manual\/.+[^' + language + ']\/(.*)$');
   let matched = details.url.match(regex);
   if(matched){
     return {
-      redirectUrl: 'https://www.php.net/manual/' + language + '/function.' + matched[1] + '.php'
+      redirectUrl: 'https://www.php.net/manual/' + language + '/' + matched[1]
     };
   }
 }, {
