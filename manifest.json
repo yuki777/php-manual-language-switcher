@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "PHP Manual Language Switcher",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Redirects the PHP Manual page to a specified PHP Manual language page.",
   "background": {
     "scripts": ["background.js"]
