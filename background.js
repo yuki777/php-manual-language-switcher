@@ -23,7 +23,18 @@ chrome.runtime.onInstalled.addListener(function(details){
 });
 
 function onInstall() {
-  if (! localStorage.getItem('language')) {
-    localStorage.setItem('language', 'en');
+  localStorage.setItem('language', getClientLanguage());
+  chrome.runtime.openOptionsPage();
+}
+
+function getClientLanguage() {
+  let lang = navigator.language.substr(0,2);
+  if(getSupportLanguages().includes(lang)){
+    return lang;
   }
+  return 'en';
+}
+
+function getSupportLanguages() {
+  return ["en", "pt_BR", "zh", "fr", "de", "ja", "ro", "ru", "es", "tr"];
 }
