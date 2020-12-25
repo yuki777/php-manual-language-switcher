@@ -1,12 +1,12 @@
 $("#save").click(function() {
-  let language = $("[name=radios]:checked").val();
+  let language = $("#selectLanguage").val();
   localStorage.setItem('language', language);
   $('#language').html(language);
 });
 
 let init = function() {
   let language = localStorage.getItem('language');
-  $('#radio_' + language).prop('checked',true);
+  $("#selectLanguage").val(language);
   $('#language').html(language);
 };
 init();

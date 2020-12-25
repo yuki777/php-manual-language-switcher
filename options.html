@@ -20,17 +20,32 @@
     <p class="lead">
       Redirects the PHP Manual page to a specified PHP Manual language page.
     </p>
+    <b>Language Setting.</b>
+    <ul>
+      <li>(en) Select the language you want to redirect to.</li>
+      <li>(pt_BR) Selecione o idioma para o qual deseja redirecionar.</li>
+      <li>(zh) 选择您要重定向到的语言。</li>
+      <li>(fr) Sélectionnez la langue vers laquelle vous souhaitez rediriger.</li>
+      <li>(de) Vælg det sprog, du vil omdirigere til.</li>
+      <li>(ja) リダイレクトしたい言語を選択してください。</li>
+      <li>(ro) Selectați limba către care doriți să redirecționați.</li>
+      <li>(ru) Выберите язык, на который хотите выполнить перенаправление.</li>
+      <li>(es) Seleccione el idioma al que desea redirigir.</li>
+      <li>(tr) Yönlendirmek istediğiniz dili seçin.</li>
+    </ul>
     <form class="form-inline" id="myForm">
-      <input type="radio" name="radios" id="radio_en" value="en">en
-      <input type="radio" name="radios" id="radio_pt_BR" value="pt_BR">pt_BR
-      <input type="radio" name="radios" id="radio_zh" value="zh">zh
-      <input type="radio" name="radios" id="radio_fr" value="fr">fr
-      <input type="radio" name="radios" id="radio_de" value="de">de
-      <input type="radio" name="radios" id="radio_ja" value="ja">ja
-      <input type="radio" name="radios" id="radio_ro" value="ro">ro
-      <input type="radio" name="radios" id="radio_ru" value="ru">ru
-      <input type="radio" name="radios" id="radio_es" value="es">es
-      <input type="radio" name="radios" id="radio_tr" value="tr">tr
+      <select id="selectLanguage">
+        <option value="en">en</option>
+        <option value="pt_BR">pt_BR</option>
+        <option value="zh">zh</option>
+        <option value="fr">fr</option>
+        <option value="de">de</option>
+        <option value="ja">ja</option>
+        <option value="ro">ro</option>
+        <option value="ru">ru</option>
+        <option value="es">es</option>
+        <option value="tr">tr</option>
+      </select>
       <a id="save" class="btn btn-primary ">Save</a>
     </form>
     e.g.
