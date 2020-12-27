@@ -1,12 +1,11 @@
-$("#save").click(function() {
-  let language = $("#selectLanguage").val();
+document.getElementById("save").addEventListener("click",function(e){
+  let language = document.getElementById("selectLanguage").value;
   localStorage.setItem('language', language);
-  $('#language').html(language);
-});
+  document.getElementById("language").innerHTML = language;
+},false);
 
-let init = function() {
+(function() {
   let language = localStorage.getItem('language');
-  $("#selectLanguage").val(language);
-  $('#language').html(language);
-};
-init();
+  document.getElementById("selectLanguage").value = language;
+  document.getElementById("language").innerHTML = language;
+})();
