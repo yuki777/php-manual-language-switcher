@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "regexSubstitution": "https://www.php.net/manual/ja/\\2"
+      }
+    },
+    "condition": {
+      "regexFilter": "^https://www\\.php\\.net/manual/([a-z]{2}/|)(.+)",
+      "resourceTypes": [
+        "main_frame"
+      ]
+    }
+  }
+]
